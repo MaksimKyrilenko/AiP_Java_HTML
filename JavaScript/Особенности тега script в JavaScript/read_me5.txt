@@ -1,0 +1,15 @@
+В теге script можно либо писать код, либо подключить файл. Попытка сделать это одновременно не будет работать. Поэтому следующий код не рабочий:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="script.js">
+			alert('text');
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
