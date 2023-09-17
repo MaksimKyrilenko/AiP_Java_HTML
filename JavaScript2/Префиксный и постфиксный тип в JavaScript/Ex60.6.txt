@@ -1,0 +1,5 @@
+let num1 = 3;
+let num2 = num1++;
+alert(num1);
+alert(num2);
+На экран выведется: 3 и 4

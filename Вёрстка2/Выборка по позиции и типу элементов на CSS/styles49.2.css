@@ -1,0 +1,6 @@
+h2:nth-of-type(1) {
+	color: red;
+}
+h2:nth-last-of-type(even) {
+	color: red;
+}

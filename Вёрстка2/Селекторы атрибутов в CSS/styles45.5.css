@@ -1,0 +1,4 @@
+a[href$=".html"] {
+	text-decoration: none;
+	color: red;
+}

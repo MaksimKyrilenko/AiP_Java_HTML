@@ -1,0 +1,32 @@
+.a1 {
+	background-image: url("bg.png"); 
+	background-position: top right;
+}
+.a2 {
+	background-image: url("bg.png"); 
+	background-size: 300px 400px;
+}
+.a3 {
+	background-image: url("bg.png"); 
+	background-attachment: scroll;
+}
+.a4 {
+	background-clip: padding-box;
+	background-image: url("bg.png");
+	background-repeat: no-repeat;
+	border: 10px dashed black;
+	padding: 30px;
+	width: 250px;
+	height: 150px;
+}
+.a5 {
+	background-image: url("bg.png");
+	background-repeat: no-repeat;
+	border: 10px dashed black;
+	padding: 30px;
+	width: 250px;
+	height: 150px;
+}
+.a6 {
+	background: url("bg.png"), no-repeat;
+}
