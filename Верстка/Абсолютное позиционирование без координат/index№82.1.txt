@@ -1,0 +1,114 @@
+Абсолютное позиционирование без координат
+На самом деле указания координат при абсолютном позиционировании не обязательно. Если элементу просто написать position в значении absolute, то он станет абсолютно спозиционированным, но останется стоять в том же месте, где и стоял. При этом все остальные элементы будут вести себя так, будто нашего элемента нет и могут налезть на него.
+
+Давайте посмотрим на примерах.
+
+Пример 
+Для начала давайте просто сделаем три блока без позиционирования и между ними некоторый текст:
+
+<div id="elem1"></div>
+<div id="elem2"></div>
+text text text text text text
+<div id="elem3"></div>
+#elem1 {
+	width: 200px;
+	height: 150px;
+	border: 1px solid red;
+}
+#elem2 {
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
+	border: 1px solid green;
+}
+#elem3 {
+	width: 50px;
+	height: 150px;
+	border: 1px solid blue;
+}
+Результат выполнения кода:
+
+открыть в дочернем окне
+Пример 
+А теперь давайте добавим зеленому блоку absolute. В результате этот блок останется на месте, а все элементы снизу будут вести себя так, будто нашего элемента нет и налезут на него:
+
+<div id="elem1"></div>
+<div id="elem2"></div>
+text text text text text text
+<div id="elem3"></div>
+#elem1 {
+	width: 200px;
+	height: 150px;
+	border: 1px solid red;
+}
+#elem2 {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
+	border: 1px solid green;
+}
+#elem3 {
+	width: 50px;
+	height: 150px;
+	border: 1px solid blue;
+}
+Результат выполнения кода:
+
+открыть в дочернем окне
+Пример 
+А теперь давайте добавим свойство left, не добавляя позицию по вертикали. В результате по горизонтали наш блок станет на указанное значение, а по вертикали - останется стоять там, где и стоял:
+
+<div id="elem1"></div>
+<div id="elem2"></div>
+text text text text text text
+<div id="elem3"></div>
+#elem1 {
+	width: 200px;
+	height: 150px;
+	border: 1px solid red;
+}
+#elem2 {
+	position: absolute;
+	left: 40px; /* добавляем позицию по горизонтали */
+	
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
+	border: 1px solid green;
+}
+#elem3 {
+	width: 50px;
+	height: 150px;
+	border: 1px solid blue;
+}
+Результат выполнения кода:
+
+открыть в дочернем окне
+Пример 
+Теперь давайте, наоборот, добавим свойство top, не добавляя позицию по горизонтали. В результате по вертикали наш блок станет на указанное значение, а по горизонтали - останется стоять там, где и стоял:
+
+<div id="elem1"></div>
+<div id="elem2"></div>
+text text text text text text
+<div id="elem3"></div>
+#elem1 {
+	width: 200px;
+	height: 150px;
+	border: 1px solid red;
+}
+#elem2 {
+	position: absolute;
+	top: 100px; /* добавляем позицию по вертикали */
+	
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
+	border: 1px solid green;
+}
+#elem3 {
+	width: 50px;
+	height: 150px;
+	border: 1px solid blue;
+}
+Результат выполнения кода:

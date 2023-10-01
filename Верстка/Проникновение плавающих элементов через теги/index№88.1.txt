@@ -1,0 +1,42 @@
+Пусть теперь у нас текст размещен в абзацах, а картинка, которой задано свойство float находится над этими абзацами. В этом случае все будет работать, как и работало - наличие других тегов не мешает обтеканию:
+
+<div>
+	<img src="img.png" alt="">
+	<p>
+		длинный текст
+	</p>
+	<p>
+		длинный текст
+	</p>
+</div>
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+img {
+	float: left;
+}
+Результат выполнения кода:
+
+
+Пусть теперь в первом абзаце мало текста - в этом случае картинка будет залазить и на второй абзац:
+
+<div>
+	<img src="img.png" alt="">
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elitorire.
+	</p>
+	<p>
+		длинный текст
+	</p>
+</div>
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+img {
+	float: left;
+}
+Результат выполнения кода:

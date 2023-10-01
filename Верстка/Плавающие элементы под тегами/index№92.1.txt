@@ -1,0 +1,78 @@
+Пусть сейчас у нас есть два абзаца и картинка, размещенная в первом абзаце. Пусть этой картинке у нас задано свойство float в значении right, а также полупрозрачность:
+
+<div>
+	<p>
+		<img src="img.png" alt="">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elitorire.
+	</p>
+	<p>
+		длинный текст
+	</p>
+</div>
+div {
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: right;
+	opacity: 0.5;
+}
+Результат выполнения кода:
+
+
+А теперь давайте поставим в HTML коде картинку после первого абзаца и посмотрим, что будет:
+
+<div>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elitorire.
+	</p>
+	<img src="img.png" alt="">
+	<p>
+		длинный текст
+	</p>
+</div>
+div {
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: right;
+	opacity: 0.5;
+}
+Результат выполнения кода:
+
+
+Как мы видим, картинку обтекает текст второго абзаца, но не первого.
+
+Давайте вообще переставим нашу картинку после второго абзаца. В этом случае она будет плавать справа, но никакого обтекания не будет:
+
+<div>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elitorire.
+	</p>
+	<p>
+		длинный текст
+	</p>
+	<img src="img.png" alt="">
+</div>
+div {
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: right;
+	opacity: 0.5;
+}
+Результат выполнения кода:
+
+
+Получается, что обтекать картинку будут только те элементы, которые находятся под ней, но не те, которые находятся над ней.

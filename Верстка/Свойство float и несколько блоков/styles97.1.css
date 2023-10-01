@@ -1,0 +1,27 @@
+#elem {
+    width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid red;
+    text-align: justify;
+}
+#elem1 {
+    float: right;
+    text-align: center;
+    width: 100px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: 1px solid red;
+}
+#elem2 {
+    float: right;
+    text-align: center;
+    width: 100px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: 1px solid red;
+}

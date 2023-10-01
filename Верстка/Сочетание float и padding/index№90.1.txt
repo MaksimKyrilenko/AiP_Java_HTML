@@ -1,0 +1,111 @@
+Давайте опять поставим картинку над абзацами, оставив им при этом левый padding. В этом случае padding отодвинет только тот текст, который прилегает слева к диву-родителю, а не к нашей картинке:
+
+<div>
+	<img src="img.png" alt="">
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elitorire.
+	</p>
+	<p>
+		длинный текст
+	</p>
+</div>
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	padding-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+	opacity: 0.5;
+}
+Результат выполнения кода:
+
+
+А теперь положим картинку в первый абзац - она будет двигаться вправо вместе с текстом абзацев:
+
+<div>
+	<p>
+		<img src="img.png" alt="">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elitorire.
+	</p>
+	<p>
+		длинный текст
+	</p>
+</div>
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	padding-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+	opacity: 0.5;
+}
+Результат выполнения кода:
+
+
+Отступы самой картинке
+Давайте добавим правый margin - в этом случае текст действительно отодвинется от правого края картинки:
+
+<div>
+	<img src="img.png" alt="">
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elitorire.
+	</p>
+	<p>
+		длинный текст
+	</p>
+</div>
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	border: 1px solid green;
+}
+img {
+	float: left;
+	margin-right: 30px;
+	opacity: 0.5;
+}
+Результат выполнения кода:
+
+
+Интересный эффект получится, если добавить еще и margin абзацам - сами абзацы отодвинутся от левого края дива-родителя, при этом текст в них по-прежнему будет отодвинут от правого края картинки, так как ей задан правый margin:
+
+<div>
+	<img src="img.png" alt="">
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elitorire.
+	</p>
+	<p>
+		длинный текст
+	</p>
+</div>
+div {
+	width: 400px;
+	border: 1px solid red;
+	text-align: justify;
+}
+p {
+	margin-left: 30px;
+	border: 1px solid green;
+}
+img {
+	float: left;
+	margin-right: 30px;
+	opacity: 0.5;
+}
+Результат выполнения кода:
+
