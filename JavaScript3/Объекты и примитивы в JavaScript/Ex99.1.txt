@@ -1,7 +1,0 @@
-1. Объект
-2. Number
-3. Массив
-4. Number
-5. Массив
-6. Number
-7. String, number, null, boolean, undefined, bigint, symbol 
