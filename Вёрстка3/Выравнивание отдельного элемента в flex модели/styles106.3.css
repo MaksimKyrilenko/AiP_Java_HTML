@@ -1,0 +1,38 @@
+#elem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 900px;
+    height: 400px;
+    margin: 20px auto;
+    border: 1px solid red;
+}
+#elem1 {
+    width: 100px;
+    height: 60px;
+    border: 1px solid green;
+}
+#elem2 {
+    width: 100px;
+    height: 60px;
+    border: 1px solid green;
+}
+#elem4 {
+    width: 100px;
+    height: 60px;
+    border: 1px solid green;
+}
+#elem5 {
+    width: 100px;
+    height: 60px;
+    border: 1px solid green;
+}
+.child {
+    width: 100px;
+    height: 60px;
+    border: 1px solid green;
+}
+.elem {
+    align-self: center;
+}

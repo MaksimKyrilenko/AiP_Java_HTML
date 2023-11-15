@@ -1,0 +1,182 @@
+№1
+<header>
+  <nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+  </nav>
+</header>
+<main>
+  <aside>
+    sidebar
+  </aside>
+  <section>
+    content
+  </section>
+</main>
+<footer>
+  footer
+</footer>
+№2
+<header>
+  <nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+  </nav>
+</header>
+<main>
+  <aside>
+    sidebar
+  </aside>
+  <article>
+    content
+  </article>
+</main>
+<footer>
+  footer
+</footer>
+<section id="content">
+  <h1></h1>
+  
+  <article class="section">
+    <h2></h2>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </article>
+  <article class="section">
+    <h2></h2>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </article>
+</section>
+№3
+<header>
+  <nav>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </nav>
+</header>
+<main>
+  <aside>
+    <p>sidebar</p>
+  </aside>
+  <article>
+    <p>content</p>
+  </article>
+</main>
+<footer>
+  <p>footer</p>
+</footer>
+<section id="content">
+  <h1>Title</h1>
+  
+  <article class="section">
+    <h2>Section 1</h2>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </article>
+  <article class="section">
+    <h2>Section 2</h2>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </article>
+</section>
+<div id="wrapper">
+  <header id="header">
+    <div id="logo">
+      <img src="" alt="logo">
+    </div>
+    <nav id="menu">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </nav>
+  </header>
+  <div id="container">
+    <aside id="left">
+      <div class="section">
+        <p>section</p>
+      </div>
+      <div class="section">
+        <p>section</p>
+      </div>
+      <div class="section">
+        <p>section</p>
+      </div>
+    </aside>
+    <article id="content-main">
+      <h1>Main Header</h1>
+
+      <section class="section">
+        <h2>Section Header</h2>
+        <div>
+          <p>
+            
+          </p>
+          <p>
+            
+          </p>
+        </div>
+        <div>
+          <p>
+            
+          </p>
+          <p>
+            
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Section Header</h2>
+        <div>
+          <p>
+            
+          </p>
+          <p>
+            
+          </p>
+        </div>
+        <div>
+          <p>
+            
+          </p>
+          <p>
+            
+          </p>
+        </div>
+      </section>
+    </article>
+    <aside id="right">
+      <div class="section">
+        <p>section</p>
+      </div>
+      <div class="section">
+        <p>section</p>
+      </div>
+      <div class="section">
+        <p>section</p>
+      </div>
+    </aside>
+  </div>
+  <footer id="footer">
+    <p>footer</p>
+  </footer>
+</div>

@@ -1,0 +1,30 @@
+#elem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 900px;
+    height: 400px;
+    margin: 20px auto;
+    border: 1px solid red;
+}
+#elem1 {
+    height: 40px;
+    border: 1px solid green;
+}
+#elem2 {
+    height: 40px;
+    border: 1px solid green;
+}
+#elem3 {
+    height: 40px;
+    border: 1px solid green;
+}
+#elem4 {
+    height: 40px;
+    border: 1px solid green;
+}
+#elem5 {
+    height: 40px;
+    border: 1px solid green;
+}

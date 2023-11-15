@@ -1,0 +1,46 @@
+#elem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 400px;
+    margin: 20px auto;
+    border: 1px solid red;
+}
+#elem1 {
+    order: 2;
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+}
+#elem2 {
+    order: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+}
+#elem3 {
+    order: 1;
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+}
+#elem4 {
+    order: 3;
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+}
+#elem5 {
+    order: 4;
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+}
+#elem6 {
+    order: -1;
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+}

@@ -1,0 +1,50 @@
+#head {
+    background: #008040;
+    color: white;
+}
+.wrapp {
+    margin-bottom: 30px;
+}
+div {
+    display: block;
+}
+#serv {
+    background-color: white;
+}
+#cont {
+    background-color: #C60304;
+    color: white;
+}
+#comp {
+    background-color: white;
+}
+.center {
+    width: 840px;
+    padding: 10px;
+    margin: 0 auto;
+}
+#header h1 {
+    font-size: 35px;
+    margin-bottom: 7px;
+    text-align: center;
+}
+.wrapper h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 27px;
+}
+#header p {
+    font-size: 21px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#cont p {
+    text-align: center;
+}
+#foot {
+    padding-top: 100px;
+    background: #FF8040;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}

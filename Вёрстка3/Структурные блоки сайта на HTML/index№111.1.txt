@@ -1,0 +1,55 @@
+Структурные блоки сайта имеют стандартные названия. Верхняя часть сайта называется header, нижняя - footer, основная часть с текстом - content, а боковая часть - sidebar. А общий блок, в котором расположен весь сайт называется wrapper:
+
+<div id="wrapper">
+	<div id="header">
+		header
+	</div>
+	<div id="content">
+		content
+	</div>
+	<div id="sidebar">
+		sidebar
+	</div>
+	<div id="footer">
+		footer
+	</div>
+</div>
+Часто основной текст и боковые панели объединяют в одном блоке с названием container:
+
+<div id="wrapper">
+	<div id="header">
+		header
+	</div>
+	<div id="container">
+		<div id="content">
+			content
+		</div>
+		<div id="sidebar">
+			sidebar
+		</div>
+	</div>
+	<div id="footer">
+		footer
+	</div>
+</div>
+Сайдбар может быть не один. Часто на сайтах делают два сайдбара - один слева от контента, а второй - справа:
+
+<div id="wrapper">
+	<div id="header">
+		header
+	</div>
+	<div id="container">
+		<div id="left">
+			left sidebar
+		</div>
+		<div id="content">
+			content
+		</div>
+		<div id="right">
+			right sidebar
+		</div>
+	</div>
+	<div id="footer">
+		footer
+	</div>
+</div>

@@ -1,0 +1,10 @@
+#B2 {
+	padding-top:    40px; /* сверху */
+	padding-right:  10px; /* справа */
+	padding-bottom: 60px; /* снизу */
+	padding-left:   10px; /* слева */
+	
+	width: 200px;
+	border: 1px solid red;
+	text-align: justify;
+}
