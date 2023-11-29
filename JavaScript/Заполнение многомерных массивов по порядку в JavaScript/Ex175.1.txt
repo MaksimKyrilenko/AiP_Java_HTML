@@ -1,0 +1,191 @@
+Исправленный код №1:
+
+let arr = [];
+
+for (let i = 0, k = 1; i < 4; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 2; j++, k++) {
+    arr[i][j] = k;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №2:
+
+let arr = [];
+
+for (let i = 0, k = 2; i < 4; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++, k += 2) {
+    arr[i][j] = k;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №3:
+
+let arr = [];
+
+for (let i = 0; i < 2; i++) {
+  arr[i] = [];
+  
+  for (let j = 0, k = 1; j < 2; j++, k += 2) {
+    arr[i][j] = [k, k + 1];
+  }
+}
+
+console.log(arr);
+
+Исправленный код №4:
+
+let arr = [];
+let k = 1;
+
+for (let i = 0; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++) {
+    arr[i][j] = k;
+    k++;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №5:
+
+let arr = [];
+let k = 1;
+
+for (let i = 0; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++) {
+    arr[i][j] = k;
+    k++;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №6:
+
+let arr = [];
+let k = 1;
+
+for (let i = 0; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++) {
+    arr[i][j] = k;
+    k++;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №7:
+
+let arr = [];
+let k = 1;
+
+for (let i = 0; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++) {
+    arr[i][j] = k;
+    k++;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №8:
+
+let arr = [];
+
+for (let i = 0, k = 1; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++, k++) {
+    arr[i][j] = k;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №9:
+
+let arr = [];
+
+for (let i = 0, k = 2; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0, k++; j < 3; j++, k++) {
+    arr[i][j] = k;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №10:
+
+let arr = [];
+
+for (let i = 0, k = 1; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++, k++) {
+    arr[i][j] = k;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №11:
+
+let arr = [];
+
+for (let i = 0, k = 0; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++) {
+    arr[i][j] = ++k * 2;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №12:
+
+let arr = [];
+let k = 1;
+
+for (let i = 0; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++) {
+    arr[i][j] = k;
+    k++;
+  }
+}
+
+console.log(arr);
+
+Исправленный код №13:
+
+let arr = [];
+
+for (let i = 0, k = 1; i < 3; i++) {
+  arr[i] = [];
+  
+  for (let j = 0; j < 3; j++, k++) {
+    arr[i][j] = k;
+  }
+}
+
+console.log(arr);

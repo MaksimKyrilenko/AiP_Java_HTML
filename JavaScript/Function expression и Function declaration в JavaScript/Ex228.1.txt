@@ -1,0 +1,4 @@
+function func() {
+	console.log('!');
+}
+Это способ Function Declaration

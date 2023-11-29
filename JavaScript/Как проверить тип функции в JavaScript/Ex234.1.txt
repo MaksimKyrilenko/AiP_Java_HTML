@@ -1,0 +1,11 @@
+№1 
+Function Expression
+
+№2 
+Function Declaration
+
+№3 
+Function Expression
+
+№4 
+Function Declaration

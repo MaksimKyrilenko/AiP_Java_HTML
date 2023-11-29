@@ -1,0 +1,5 @@
+1. Function Declaration
+2. Function Declaration
+3. Function Expression
+4. Function Declaration
+5. Function Declaration
