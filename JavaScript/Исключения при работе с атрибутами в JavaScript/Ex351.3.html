@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>
+		<div id="elem" class="aaa bbb ccc"></div>
+		<button id="getClassArrayBtn">Получить массив классов</button>   	
+		<script>
+		let elem = document.getElementById('elem');
+		let getClassArrayBtn = document.getElementById('getClassArrayBtn');
+		getClassArrayBtn.addEventListener('click', function() {
+		let classArray = elem.className.split(' ');
+		console.log(classArray); 
+		});		
+		</script>
+	</body>
+</html>

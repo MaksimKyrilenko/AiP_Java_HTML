@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<button id="button">Добавить элемент в список</button>
+		<ol id="elem">
+		</ol>
+		  <script>
+			let ol = document.querySelector('#elem');
+			let button = document.querySelector('#button');
+
+			button.addEventListener('click', function() {
+			let li = document.createElement('li');
+			li.textContent = 'item';
+			li.addEventListener('click', function() {
+				this.textContent += '!';
+			});
+			ol.appendChild(li);
+			});
+		  </script>		  
+	</body>
+</html

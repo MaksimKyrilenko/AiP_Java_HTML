@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="elem" maxlength="5">
+		<p id="result"></p>		  
+		  <script>
+		const elem = document.querySelector('#elem');
+		const result = document.querySelector('#result');
+
+		elem.addEventListener('input', function() {
+		const remainingChars = 5 - this.value.length;
+		if (remainingChars >= 0) {
+			result.textContent = "Осталось ввести ${remainingChars} символов";
+		} else {
+			result.textContent = "Превышение на ${Math.abs(remainingChars)} символов";
+		}
+		});
+		  </script>		  
+	</body>
+</html

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<table>
+			<thead>
+			  <tr>
+				<th>Header 1</th>
+				<th>Header 2</th>
+				<th>Header 3</th>
+				<th>Action</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>text1</td>
+				<td>text2</td>
+				<td>text3</td>
+				<td><a href="#" class="link">Highlight</a></td>
+			  </tr>
+			  <tr>
+				<td>text4</td>
+				<td>text5</td>
+				<td>text6</td>
+				<td><a href="#" class="link">Highlight</a></td>
+			  </tr>
+			</tbody>
+		  </table>
+		  
+		  <script>
+			let rows = document.querySelectorAll('tbody tr');
+			let highlighted = new Set();
+		  
+			for (let row of rows) {
+			  let link = row.querySelector('.link');
+		  
+			  link.addEventListener('click', function(e) {
+				e.preventDefault();
+				if (highlighted.has(row)) {
+				  row.style.backgroundColor = '';
+				  highlighted.delete(row);
+				} else {
+				  row.style.backgroundColor = 'green';
+				  highlighted.add(row);
+				}
+			  });
+			}
+		  </script>					
+	</body>
+</html

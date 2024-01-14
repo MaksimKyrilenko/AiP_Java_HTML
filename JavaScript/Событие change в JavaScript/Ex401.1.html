@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="elem" value="Введите текст">
+		<p id="result"></p>				  
+		  <script>
+		const elem = document.querySelector('#elem');
+		const result = document.querySelector('#result');
+
+		elem.addEventListener('change', function() {
+		result.textContent = this.value;
+		});
+
+		  </script>		  
+	</body>
+</html

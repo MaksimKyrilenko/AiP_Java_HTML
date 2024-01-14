@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input type="number" id="num1">
+		<input type="number" id="num2">
+		<p id="result"></p>
+		<a href="#" id="calculate">Посчитать</a>
+		
+		<script>
+		  let num1 = document.querySelector('#num1');
+		  let num2 = document.querySelector('#num2');
+		  let result = document.querySelector('#result');
+		  let calculate = document.querySelector('#calculate');
+		
+		  calculate.addEventListener('click', function(event) {
+			event.preventDefault();
+			result.textContent = +num1.value + +num2.value;
+		  });
+		</script>						
+	</body>
+</html

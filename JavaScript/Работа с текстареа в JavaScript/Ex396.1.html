@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<textarea id="myTextarea">Введите текст</textarea>
+		<p id="myParagraph"></p>	  
+		  <script>
+		const textarea = document.querySelector('#myTextarea');
+		const paragraph = document.querySelector('#myParagraph');
+
+		textarea.addEventListener('blur', function() {
+		paragraph.textContent = this.value;
+		});
+
+		  </script>		  
+	</body>
+</html

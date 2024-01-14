@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<div>
+			<button>Toggle</button>
+			<p>Paragraph</p>
+		  </div>
+		  <div>
+			<button>Toggle</button>
+			<p>Paragraph</p>
+		  </div>			  
+		  <script>
+			let divs = document.querySelectorAll('div');
+
+			divs.forEach(div => {
+			let button = div.querySelector('button');
+			let paragraph = div.querySelector('p');
+			
+			button.addEventListener('click', function() {
+				paragraph.classList.toggle('hidden');
+			});
+			});
+		  </script>		  
+	</body>
+</html

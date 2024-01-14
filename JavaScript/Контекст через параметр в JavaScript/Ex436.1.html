@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="elem" value="3">  
+		  <script>
+			let elem = document.querySelector('#elem');
+			elem.addEventListener('blur', parent);
+
+			function parent() {
+			child(this);
+			
+			function child(param) {
+				console.log(param.value * param.value); 
+			}
+			}
+		  </script>
+					  
+	</body>
+</html

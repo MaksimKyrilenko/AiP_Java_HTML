@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="elem" value="привет">
+		  
+		  <script>
+			let elem = document.getElementById('elem');
+			function func(name, surname) {
+			console.log(this.value + ', ' + name + ' ' + surname);
+			}
+			let newFunc = func.bind(elem);
+			newFunc('John', 'Smit'); 
+			newFunc('Eric', 'Luis'); 
+		  </script>					  
+	</body>
+</html

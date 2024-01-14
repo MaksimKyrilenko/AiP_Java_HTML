@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<table id="table">
+			<tr>
+			  <td></td>
+			  <td></td>
+			</tr>
+			<tr>
+			  <td></td>
+			  <td></td>
+			</tr>
+		  </table>
+		  <button id="add-row-col">Добавить ряд и колонку</button>
+		  <script>
+			let table = document.querySelector('#table');
+			let addRowColBtn = document.querySelector('#add-row-col');
+
+			function addRow() {
+			let tr = document.createElement('tr');
+			for (let i = 0; i < table.rows[0].cells.length; i++) {
+				let td = document.createElement('td');
+				tr.appendChild(td);
+			}
+			table.appendChild(tr);
+			}
+
+			function addColumn() {
+			for (let i = 0; i < table.rows.length; i++) {
+				let td = document.createElement('td');
+				table.rows[i].appendChild(td);
+			}
+			}
+
+			addRowColBtn.addEventListener('click', function() {
+			addRow();
+			addColumn();
+			});
+		  </script>		  
+	</body>
+</html>

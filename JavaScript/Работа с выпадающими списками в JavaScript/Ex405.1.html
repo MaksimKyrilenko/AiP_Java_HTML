@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<select id="select">
+			<option>one</option>
+			<option selected>two</option>
+			<option>three</option>
+		  </select>
+		  <p></p>
+		  <button>Кнопка</button>
+		  
+		  <script>
+			let select = document.querySelector('#select');
+			let p = document.querySelector('p');
+			let button = document.querySelector('button');
+
+			button.addEventListener('click', function() {
+			p.textContent = select.value;
+			});
+		  </script>		  
+	</body>
+</html

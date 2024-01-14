@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+		<body>
+			<div id="elem">282:394</div>
+			<script>
+				let elem = document.querySelector('#elem');
+				window.addEventListener('mousemove', function(event) {
+					elem.innerHTML = event.pageX + ':' + event.pageY;
+				});
+			</script>
+	</body>			
+</html

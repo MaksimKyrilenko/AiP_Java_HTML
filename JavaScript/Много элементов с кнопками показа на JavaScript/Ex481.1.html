@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<button data-target="1">Toggle 1</button>
+		<button data-target="2">Toggle 2</button>
+		<p data-id="1">Paragraph 1</p>
+		<p data-id="2">Paragraph 2</p>		
+		  <script>
+			let buttons = document.querySelectorAll('button');
+			let paragraphs = document.querySelectorAll('p');
+
+			buttons.forEach(button => {
+			button.addEventListener('click', function() {
+				let targetId = this.getAttribute('data-target');
+				let targetParagraph = document.querySelector(`p[data-id="${targetId}"]`);
+				targetParagraph.classList.toggle('hidden');
+			});
+			});
+		  </script>		  
+	</body>
+</html

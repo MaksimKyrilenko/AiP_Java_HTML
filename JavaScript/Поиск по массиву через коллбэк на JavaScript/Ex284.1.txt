@@ -1,0 +1,3 @@
+Изучите теорию по следующим ссылкам:
+
+find findIndex findLast findLastIndex

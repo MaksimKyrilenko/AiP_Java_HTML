@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="first" maxlength="2">
+		<input id="second" maxlength="2">	  
+		  <script>
+		const first = document.querySelector('#first');
+		const second = document.querySelector('#second');
+
+		first.addEventListener('input', function() {
+		if (this.value.length === 2) {
+			second.focus();
+		}
+		});
+
+		second.addEventListener('input', function() {
+		if (this.value.length === 2) {
+			second.blur();
+		}
+		});
+		  </script>		  
+	</body>
+</html

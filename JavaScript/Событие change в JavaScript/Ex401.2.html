@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input type="checkbox" id="elem">
+		<p id="result"></p>						  
+		  <script>
+		const elem = document.querySelector('#elem');
+		const result = document.querySelector('#result');
+
+		elem.addEventListener('change', function() {
+		result.textContent = this.checked ? 'Выбрано' : 'Не выбрано';
+		});
+		  </script>		  
+	</body>
+</html

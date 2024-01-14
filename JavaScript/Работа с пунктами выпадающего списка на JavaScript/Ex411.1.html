@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<select id="select">
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+		  </select>		  
+		  <script>
+		let select = document.querySelector('#select');
+		let options = select.options;
+
+		options.forEach(option => {
+		if (option.selected) {
+			option.text += '!';
+		} else {
+			option.text += '?';
+		}
+	});
+		  </script>				
+	</body>
+</html

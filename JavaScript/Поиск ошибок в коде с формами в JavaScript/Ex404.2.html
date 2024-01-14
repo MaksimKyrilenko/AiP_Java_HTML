@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input type="checkbox">
+		<div></div>
+		<button>button</button>
+		<script>
+		let textarea = document.querySelector('textarea');
+		let div = document.querySelector('div');
+
+		textarea.addEventListener('blur', function() {
+		div.textContent = textarea.value;
+		});
+		  </script>		  
+	</body>
+</html

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="myInput" type="text">
+		<button id="blockButton">Заблокировать</button>
+		<button id="unblockButton">Разблокировать</button>  
+		  <script>
+		const input = document.querySelector('#myInput');
+		const blockButton = document.querySelector('#blockButton');
+		const unblockButton = document.querySelector('#unblockButton');
+
+		blockButton.addEventListener('click', function() {
+		input.disabled = true;
+		});
+
+		unblockButton.addEventListener('click', function() {
+		input.disabled = false;
+		});
+		  </script>		  
+	</body>
+</html

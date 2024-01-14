@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input type="checkbox" id="myCheckbox">
+		<button id="toggleButton">Переключить</button>			  
+		  <script>
+		const checkbox = document.querySelector('#myCheckbox');
+		const toggleButton = document.querySelector('#toggleButton');
+
+		toggleButton.addEventListener('click', function() {
+		checkbox.checked = !checkbox.checked;
+		});
+		  </script>		  
+	</body>
+</html

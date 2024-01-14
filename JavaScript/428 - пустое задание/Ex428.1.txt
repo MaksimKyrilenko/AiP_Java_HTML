@@ -1,0 +1,65 @@
+Навешивание обработчиков на новые элементы в JavaScript
+Пусть у нас есть список ul и кнопка:
+
+<ul>
+	<li>item</li>
+	<li>item</li>
+	<li>item</li>
+	<li>item</li>
+	<li>item</li>
+</ul>
+
+<button>add</button>
+Получим наши элементы в соответствующие переменные:
+
+let button = document.querySelector('button');
+let list   = document.querySelector('ul');
+let items  = list.querySelectorAll('li');
+Сделаем так, чтобы по клику на любую li ей в конец добавлялся восклицательный знак:
+
+for (let item of items) {
+	item.addEventListener('click', function() {
+		this.textContent = this.textContent + '!';
+	});
+}
+Давайте теперь сделаем так, чтобы по нажатию на кнопку в конец списка добавлялся новая li:
+
+button.addEventListener('click', function() {
+	let item = document.createElement('li');
+	item.textContent = 'item';
+	list.appendChild(item);
+});
+Мы, однако, получим проблему: клик на новую добавленную li не будет приводить к добавлению восклицательного знака в конец. Дело в том, что мы добавляем обработчик клика только на те li, которые существовали изначально, но не на новые.
+
+Исправим проблему, навесив на новую li обработчик клика:
+
+button.addEventListener('click', function() {
+	let item = document.createElement('li');
+	item.textContent = 'item';
+	
+	item.addEventListener('click', function() { // обработчик клика
+		this.textContent = this.textContent + '!';
+	});
+	
+	list.appendChild(item);
+});
+Однако, теперь код функции-обработчика дублируется в двух местах - для изначально существующих li и для новых. Исправим это, вынеся его в отдельную функцию:
+
+function handler() {
+	this.textContent = this.textContent + '!';
+}
+Используем нашу функцию, чтобы избежать дублирования кода:
+
+for (let item of items) {
+	item.addEventListener('click', handler);
+}
+
+button.addEventListener('click', function() {
+	let item = document.createElement('li');
+	item.textContent = 'item';
+	
+	item.addEventListener('click', handler);
+	
+	list.appendChild(item);
+});
+Задача в общем-то решена и мы избежали дублирования кода функции-обработчика. Однако, навешивать обработчики событий нам все равно приходится в двух местах: и в цикле для существующих li, и в при клике на кнопку. В следующем уроке мы разберем способ избавится от этого неудобства.

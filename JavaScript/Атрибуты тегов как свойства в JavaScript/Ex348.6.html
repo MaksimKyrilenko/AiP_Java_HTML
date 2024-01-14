@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		
+		<img id="myImage" src="c:\Фото\3-63.jpg" alt="Картинка">
+
+		<button id="myButton">Нажми меня</button>
+
+		
+		<script>
+
+		let image = document.getElementById("myImage");
+		let button = document.getElementById("myButton");
+
+		button.addEventListener("click", function() {
+			image.setAttribute("width", "300");
+		});
+		
+		</script>
+	</body>
+</html>

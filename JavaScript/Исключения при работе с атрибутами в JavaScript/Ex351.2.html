@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>
+		<div id="elem">Blog</div>
+		<button id="addNewClassBtn">Добавить класс</button>   	
+		<script>
+		let elem = document.getElementById('elem');
+		let addNewClassBtn = document.getElementById('addNewClassBtn');
+		addNewClassBtn.addEventListener('click', function() {
+			elem.classList.add('newClass');
+			console.log(elem);
+		});		
+		</script>
+	</body>
+</html>

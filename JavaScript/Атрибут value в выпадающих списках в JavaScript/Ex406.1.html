@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<select id="days">
+			<option value="1">Понедельник</option>
+			<option value="2">Вторник</option>
+			<option value="3">Среда</option>
+			<option value="4">Четверг</option>
+			<option value="5">Пятница</option>
+			<option value="6">Суббота</option>
+			<option value="7">Воскресенье</option>
+		  </select>
+		  <p></p>
+		  
+		  <script>
+			let days = document.querySelector('#days');
+			let p = document.querySelector('p');
+
+			days.addEventListener('change', function() {
+			let selectedDay = parseInt(this.value);
+			if (selectedDay === 6 || selectedDay === 7) {
+				p.textContent = `${this.options[this.selectedIndex].text} - выходной день`;
+			} else {
+				p.textContent = `${this.options[this.selectedIndex].text} - рабочий день`;
+			}
+			});
+		  </script>		  
+	</body>
+</html

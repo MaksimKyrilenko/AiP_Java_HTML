@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<textarea></textarea>
+		<div></div>
+		  <script>
+		let textarea = document.querySelector('textarea');
+		let div = document.querySelector('div');
+
+		textarea.addEventListener('blur', function() {
+		div.textContent = textarea.value;
+		});
+		  </script>		  
+	</body>
+</html

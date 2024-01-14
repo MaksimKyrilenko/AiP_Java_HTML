@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<a href="/" id="elem1">ссылка 1</a>
+		<a href="/about" id="elem2">ссылка 2</a>		
+		<script>
+		  let link1 = document.querySelector('#elem1');
+		  let link2 = document.querySelector('#elem2');
+		
+		  link1.addEventListener('click', function(event) {
+			event.preventDefault();
+			link1.textContent += link1.getAttribute('href');
+		  });
+		
+		  link2.addEventListener('click', function(event) {
+			event.preventDefault();
+			link2.textContent += link2.getAttribute('href');
+		  });
+		</script>					
+	</body>
+</html

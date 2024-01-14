@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<div id="elem1"></div>
+		<div id="elem2"></div>
+		  
+		  <script>
+			function createTable(rows, cols, parent) {
+			let table = document.createElement('table');
+			
+			for (let i = 0; i < rows; i++) {
+				let row = table.insertRow();
+				for (let j = 0; j < cols; j++) {
+				let cell = row.insertCell();
+				cell.textContent = `${i + 1},${j + 1}`;
+				}
+			}			
+			parent.appendChild(table);
+			}
+			let div = document.querySelector('#elem');
+			createTable(3, 4, div);
+			let div1 = document.querySelector('#elem1');
+			createTable(3, 4, div1);
+			let div2 = document.querySelector('#elem2');
+			createTable(5, 6, div2);
+		  </script>		  
+	</body>
+</html

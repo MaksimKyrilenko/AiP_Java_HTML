@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<ul id="parent">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		  </ul>
+		  
+		  <input type="submit" id="button">
+		  
+		  <script>
+			let parent = document.querySelector('#parent');
+			let button = document.querySelector('#button');
+		  
+			function addListItem() {
+			  let li = document.createElement('li');
+			  li.textContent = parent.children.length + 1; 
+		  
+			  li.addEventListener('click', function() {
+				this.remove(); 
+			  });
+		  
+			  parent.appendChild(li);
+			}
+		  
+			button.addEventListener('click', function() {
+			  addListItem(); 
+			});
+		  
+			for (let i = 0; i < parent.children.length; i++) {
+			  let li = parent.children[i];
+			  li.addEventListener('click', function() {
+				this.remove();
+			  });
+			}
+		  </script>
+			
+	</body>
+</html

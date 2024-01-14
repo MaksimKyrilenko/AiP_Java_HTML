@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+			<input type="number" id="rows" placeholder="Rows">
+			<input type="number" id="columns" placeholder="Columns">
+			<button onclick="createTable()">Create Table</button>
+			<table id="table"></table>
+
+		  <script>
+			function createTable() {
+			let rows = document.getElementById('rows').value;
+			let columns = document.getElementById('columns').value;
+			let table = document.getElementById('table');
+
+			while (table.firstChild) {
+				table.removeChild(table.firstChild);
+			}
+
+			for (let i = 0; i < rows; i++) {
+				let tr = document.createElement('tr');
+				
+				for (let j = 0; j < columns; j++) {
+				let td = document.createElement('td');
+				tr.appendChild(td);
+				}
+				
+				table.appendChild(tr);
+			}
+			}
+		  </script>		  
+	</body>
+</html

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<select id="select">
+			<option value="option1">Option 1</option>
+			<option value="option2">Option 2</option>
+			<option value="option3">Option 3</option>
+		  </select>
+		  <button id="button">Click me</button>
+		  
+		  <script>
+			let select = document.querySelector('#select');
+			let button = document.querySelector('#button');
+
+			button.addEventListener('click', function() {
+			let selectedOption = select[select.selectedIndex];
+			alert(selectedOption.textContent);
+			});
+		  </script>				
+	</body>
+</html

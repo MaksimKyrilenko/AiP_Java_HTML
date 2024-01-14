@@ -1,0 +1,15 @@
+Прекращение всплытия событий в JavaScript
+Всплытие события можно остановить на любой элемент, через который всплывает событие. Для этого в коде элемента следует вызвать метод stopPropagation объекта Event.
+
+В следующем примере клик по красному блоку сработает на нем самом, затем на голубом блоке и все - голубой блок прекращает дальнейшее всплытие и зеленый блок уже никак не отреагирует:
+
+elem1.addEventListener('click', function() {
+	console.log('зеленый');
+});
+elem2.addEventListener('click', function(event) {
+	console.log('голубой');
+	event.stopPropagation(); // остановим всплытие
+});
+elem3.addEventListener('click', function() {
+	console.log('красный');
+});

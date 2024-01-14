@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+ <p>Первый абзац</p>
+ <p>Второй абзац</p>
+ <p>Третий абзац</p>
+
+ <script>
+  let paragraphs = document.getElementsByTagName('p');
+
+  for (let i = 0; i < paragraphs.length; i++) {
+   paragraphs[i].setAttribute('data-num', i + 1);
+  }
+ </script>
+</body>
+</html>

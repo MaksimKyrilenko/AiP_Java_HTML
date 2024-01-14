@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<div id="parent"></div>
+		  <script>
+			let parent = document.querySelector('#parent');
+			let p = document.createElement('p');
+			parent.appendChild(p);
+
+			for (let i = 1; i <= 5; i++) {
+			let input = document.createElement('input');
+			input.addEventListener('blur', function() {
+				p.textContent = this.value;
+			});
+			
+			parent.appendChild(input);
+			}
+		  </script>		  
+	</body>
+</html

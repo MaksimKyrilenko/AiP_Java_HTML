@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="elem" value="3">  
+		  <script>
+			let elem = document.querySelector('#elem');
+			elem.addEventListener('blur', func);
+
+			function func() {
+			let self = this;
+			
+			alert( square.call(self) );
+			
+			function square() {
+				return this.value * this.value;
+			}
+			}
+		  </script>				  
+	</body>
+</html

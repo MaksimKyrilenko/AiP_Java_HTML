@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="elem">
+		<p id="result"></p>	  
+		  <script>
+		const elem = document.querySelector('#elem');
+		const result = document.querySelector('#result');
+
+		elem.addEventListener('input', function() {
+		if (this.value.length === 5) {
+			result.textContent = 'Длина текста достигла 5 символов';
+		}
+		});
+
+		  </script>		  
+	</body>
+</html

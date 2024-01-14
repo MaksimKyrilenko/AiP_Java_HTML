@@ -1,0 +1,410 @@
+№1
+let arr = ["apple", "banana", "cherry", "date"];
+
+let ul = document.createElement('ul');
+arr.forEach(item => {
+  let li = document.createElement('li');
+  li.textContent = item;
+  ul.appendChild(li);
+});
+
+document.body.appendChild(ul);
+
+№2
+ul.addEventListener('click', function(e) {
+  if (e.target.tagName === 'LI') {
+    let input = document.createElement('input');
+    input.value = e.target.textContent;
+    e.target.textContent = '';
+    e.target.appendChild(input);
+    input.focus();
+
+    input.addEventListener('blur', function() {
+      e.target.textContent = input.value;
+    });
+  }
+});
+
+№3
+let newInput = document.createElement('input');
+let addButton = document.createElement('button');
+addButton.textContent = 'Add';
+document.body.appendChild(newInput);
+document.body.appendChild(addButton);
+
+addButton.addEventListener('click', function() {
+  let li = document.createElement('li');
+  li.textContent = newInput.value;
+  ul.appendChild(li);
+
+  newInput.value = '';
+
+  li.addEventListener('click', function(e) {
+    let input = document.createElement('input');
+    input.value = e.target.textContent;
+    e.target.textContent = '';
+    e.target.appendChild(input);
+    input.focus();
+
+    input.addEventListener('blur', function() {
+      e.target.textContent = input.value;
+    });
+  });
+});
+
+№4
+ul.addEventListener('click', function(e) {
+  if (e.target.tagName === 'LI') {
+    let input = document.createElement('input');
+    input.value = e.target.textContent;
+    e.target.textContent = '';
+    e.target.appendChild(input);
+    input.focus();
+
+    input.addEventListener('blur', function() {
+      e.target.textContent = input.value;
+    });
+  } else if (e.target.tagName === 'A' && e.target.textContent === 'удалить') {
+    e.target.parentElement.remove();
+  }
+});
+
+let newInput = document.createElement('input');
+let addButton = document.createElement('button');
+addButton.textContent = 'Add';
+document.body.appendChild(newInput);
+document.body.appendChild(addButton);
+
+addButton.addEventListener('click', function() {
+  let li = document.createElement('li');
+  li.textContent = newInput.value;
+  
+  let deleteLink = document.createElement('a');
+  deleteLink.href = '#';
+  deleteLink.textContent = 'удалить';
+  li.appendChild(deleteLink);
+
+  ul.appendChild(li);
+
+  newInput.value = '';
+
+  li.addEventListener('click', function(e) {
+    let input = document.createElement('input');
+    input.value = e.target.textContent;
+    e.target.textContent = '';
+    e.target.appendChild(input);
+    input.focus();
+
+    input.addEventListener('blur', function() {
+      e.target.textContent = input.value;
+    });
+  });
+
+  deleteLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.target.parentElement.remove();
+  });
+});
+
+№5
+ul.addEventListener('click', function(e) {
+  if (e.target.tagName === 'LI') {
+    let input = document.createElement('input');
+    input.value = e.target.textContent;
+    e.target.textContent = '';
+    e.target.appendChild(input);
+    input.focus();
+
+    input.addEventListener('blur', function() {
+      e.target.textContent = input.value;
+    });
+  } else if (e.target.tagName === 'A' && e.target.textContent === 'удали
+ть') {
+    e.target.parentElement.remove();
+  } else if (e.target.tagName === 'A' && e.target.textContent === 'перечеркнуть') {
+    if (e.target.parentElement.style.textDecoration === 'line-through') {
+      e.target.parentElement.style.textDecoration = 'none';
+    } else {
+      e.target.parentElement.style.textDecoration = 'line-through';
+    }
+  }
+});
+
+let newInput = document.createElement('input');
+let addButton = document.createElement('button');
+addButton.textContent = 'Add';
+document.body.appendChild(newInput);
+document.body.appendChild(addButton);
+
+addButton.addEventListener('click', function() {
+  let li = document.createElement('li');
+  li.textContent = newInput.value;
+  
+  let deleteLink = document.createElement('a');
+  deleteLink.href = '#';
+  deleteLink.textContent = 'удалить';
+  li.appendChild(deleteLink);
+
+  let strikeLink = document.createElement('a');
+  strikeLink.href = '#';
+  strikeLink.textContent = 'перечеркнуть';
+  li.appendChild(strikeLink);
+
+  ul.appendChild(li);
+
+  newInput.value = '';
+
+  li.addEventListener('click', function(e) {
+    let input = document.createElement('input');
+    input.value = e.target.textContent;
+    e.target.textContent = '';
+    e.target.appendChild(input);
+    input.focus();
+
+    input.addEventListener('blur', function() {
+      e.target.textContent = input.value;
+    });
+  });
+
+  deleteLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.target.parentElement.remove();
+  });
+
+  strikeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    if (e.target.parentElement.style.textDecoration === 'line-through') {
+      e.target.parentElement.style.textDecoration = 'none';
+    } else {
+      e.target.parentElement.style.textDecoration = 'line-through';
+    }
+  });
+});
+
+№6
+
+let employees = [
+  {name: 'employee1', age: 30, salary: 400},
+  {name: 'employee2', age: 31, salary: 500},
+  {name: 'employee3', age: 32, salary: 600},
+];
+
+let table = document.createElement('table');
+let thead = table.createTHead();
+let tbody = table.createTBody();
+
+let headerRow = thead.insertRow();
+for (let key in employees[0]) {
+  let th = document.createElement('th');
+  th.textContent = key;
+  headerRow.appendChild(th);
+}
+
+employees.forEach(employee => {
+  let row = tbody.insertRow();
+  for (let key in employee) {
+    let cell = row.insertCell();
+    cell.textContent = employee[key];
+  }
+});
+
+document.body.appendChild(table);
+
+
+№7
+
+table.addEventListener('click', function(e) {
+  if (e.target.tagName === 'TD') {
+    let input = document.createElement('input');
+    input.value = e.target.textContent;
+    e.target.textContent = '';
+    e.target.appendChild(input);
+    input.focus();
+
+    input.addEventListener('blur', function() {
+      e.target.textContent = input.value;
+    });
+  }
+});
+
+
+№8
+employees.forEach((employee, index) => {
+  let row = tbody.insertRow();
+  for (let key in employee) {
+    let cell = row.insertCell();
+    cell.textContent = employee[key];
+  }
+  
+  let deleteCell = row.insertCell();
+  let deleteLink = document.createElement('a');
+  deleteLink.href = '#';
+  deleteLink.textContent = 'удалить';
+  deleteCell.appendChild(deleteLink);
+
+  deleteLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    table.deleteRow(index + 1); // +1 to account for the header row
+  });
+});
+
+
+№9
+
+let nameInput = document.createElement('input');
+nameInput.placeholder = 'Имя';
+
+let ageInput = document.createElement('input');
+ageInput.placeholder = 'Возраст';
+
+let salaryInput = document.createElement('input');
+salaryInput.placeholder = 'Зарплата';
+
+let addButton = document.createElement('button');
+addButton.textContent = 'Добавить';
+
+document.body.appendChild(nameInput);
+document.body.appendChild(ageInput);
+document.body.appendChild(salaryInput);
+document.body.appendChild(addButton);
+
+addButton.addEventListener('click', function() {
+  let name = nameInput.value;
+  let age = ageInput.value;
+  let salary = salaryInput.value;
+
+  let newRow = tbody.insertRow();
+  let nameCell = newRow.insertCell();
+  nameCell.textContent = name;
+  
+  let ageCell = newRow.insertCell();
+  ageCell.textContent = age;
+
+  let salaryCell = newRow.insertCell();
+  salaryCell.textContent = salary;
+
+  let deleteCell = newRow.insertCell();
+  let deleteLink = document.createElement('a');
+  deleteLink.href = '#';
+  deleteLink.textContent = 'удалить';
+  deleteCell.appendChild(deleteLink);
+
+  nameInput.value = '';
+  ageInput.value = '';
+  salaryInput.value = '';
+
+  deleteLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    newRow.remove();
+  });
+
+  newRow.addEventListener('click', function(e) {
+    if (e.target.tagName === 'TD') {
+      let input = document.createElement('input');
+      input.value = e.target.textContent;
+      e.target.textContent = '';
+      e.target.appendChild(input);
+      input.focus();
+
+      input.addEventListener('blur', function() {
+        e.target.textContent = input.value;
+      });
+    }
+  });
+});
+
+№10
+
+let employees = [
+  {name: 'employee1', age: 30, salary: 400},
+  {name: 'employee2', age: 31, salary: 500},
+  {name: 'employee3', age: 32, salary: 600},
+];
+
+let ul = document.createElement('ul');
+
+employees.forEach(employee => {
+  let li = document.createElement('li');
+  li.textContent = Name: ${employee.name}, Age: ${employee.age}, Salary: ${employee.salary};
+  ul.appendChild(li);
+});
+
+document.body.appendChild(ul);
+
+
+№11
+
+ul.addEventListener('click', function(e) {
+  if (e.target.tagName === 'LI') {
+    let input = document.createElement('input');
+    input.value = e.target.textContent;
+    e.target.textContent = '';
+    e.target.appendChild(input);
+    input.focus();
+
+    input.addEventListener('blur', function() {
+      e.target.textContent = input.value;
+    });
+  }
+});
+
+
+№12
+
+employees.forEach((employee, index) => {
+  let li = ul.children[index];
+  let deleteLink = document.createElement('a');
+  deleteLink.href = '#';
+  deleteLink.textContent = 'удалить';
+  li.appendChild(deleteLink);
+
+  deleteLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    ul.removeChild(li);
+  });
+});
+
+
+№13
+
+let nameInput = document.createElement('input');
+nameInput.placeholder = 'Имя';
+
+let ageInput = document.createElement('input');
+ageInput.placeholder = 'Возраст';
+
+let salaryInput = document.createElement('input');
+salaryInput.placeholder = 'Зарплата';
+
+let addButton = document.createElement('button');
+addButton.textContent = 'Добавить';
+
+document.body.appendChild(nameInput);
+document.body.appendChild(ageInput);
+document.body.appendChild(salaryInput);
+document.body.appendChild(addButton);
+
+addButton.addEventListener('click', function() {
+  let name = nameInput.value;
+  let age = ageInput.value;
+  let salary = salaryInput.value;
+
+  let newLi = document.createElement('li');
+  newLi.textContent = Name: ${name}, Age: ${age}, Salary: ${salary};
+  
+  let deleteLink = document.createElement('a');
+  deleteLink.href = '#';
+  deleteLink.textContent = 'удалить';
+  newLi.appendChild(deleteLink);
+
+  ul.appendChild(newLi);
+
+  deleteLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    ul.removeChild(newLi);
+  });
+
+  nameInput.value = '';
+  ageInput.value = '';
+  salaryInput.value = '';
+});

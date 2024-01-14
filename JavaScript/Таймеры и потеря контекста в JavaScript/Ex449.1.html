@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input type="button" id="elem" value="1">		  
+		  <script>
+			let elem = document.querySelector('#elem');
+
+			elem.addEventListener('click', function() {
+			let self = this;
+			setInterval(function() {
+				self.value = Number(self.value) + 1;
+			}, 1000);
+			});
+		  </script>		  
+	</body>
+</html

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<div id="parent">
+			<p><span>text1</span></p>
+			<p><span>text2</span></p>
+			<p><span>text3</span></p>
+		  </div>
+		  
+		  <script>
+			let ps = document.querySelectorAll('#parent p');
+		  
+			for (let p of ps) {
+			  let span = document.createElement('span');
+			  span.textContent = p.textContent;
+			  p.textContent = '';
+			  p.appendChild(span);
+		  
+			  span.addEventListener('click', function() {
+				let input = document.createElement('input');
+				input.value = span.textContent;
+		  
+				span.textContent = '';
+				span.appendChild(input);
+		  
+				input.addEventListener('blur', function() {
+				  span.textContent = this.value;
+				});
+			  });
+		  
+			  let remove = document.createElement('a');
+			  remove.href = '#';
+			  remove.textContent = 'remove';
+			  remove.classList.add('remove');
+			  p.appendChild(remove);
+		  
+			  remove.addEventListener('click', function(e) {
+				e.preventDefault();
+				remove.parentNode.remove();
+			  });
+			}
+		  </script>					  
+	</body>
+</html

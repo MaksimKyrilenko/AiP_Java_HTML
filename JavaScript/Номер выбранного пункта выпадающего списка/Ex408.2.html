@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<select id="dayOfWeek">
+			<option value="Monday">Понедельник</option>
+			<option value="Tuesday">Вторник</option>
+			<option value="Wednesday">Среда</option>
+			<option value="Thursday">Четверг</option>
+			<option value="Friday">Пятница</option>
+			<option value="Saturday">Суббота</option>
+			<option value="Sunday">Воскресенье</option>
+		  </select>
+		  <script>
+			let daySelect = document.querySelector('#dayOfWeek');
+			
+			let today = new Date().getDay();
+			daySelect.selectedIndex = today;
+		  </script>		  		  
+	</body>
+</html

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input type="number" id="num1">
+		<input type="number" id="num2">
+		<input type="number" id="num3">
+		<button id="btn">Calculate sum</button>			  
+		  <script>
+			(function(selector1, selector2, selector3, buttonSelector) {
+			let num1Input = document.querySelector(selector1);
+			let num2Input = document.querySelector(selector2);
+			let num3Input = document.querySelector(selector3);
+			let button = document.querySelector(buttonSelector);
+			
+			function calculateSum() {
+				let num1 = Number(num1Input.value);
+				let num2 = Number(num2Input.value);
+				let num3 = Number(num3Input.value);
+				console.log(num1 + num2 + num3);
+			}
+			
+			button.addEventListener('click', calculateSum);
+			})('#num1', '#num2', '#num3', '#btn');
+		  </script>		  
+	</body>
+</html

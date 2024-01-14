@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<p id="myParagraph">Текст абзаца</p>
+		<button id="strikeButton">Перечеркнуть</button>
+		<button id="boldButton">Жирный</button>
+		<button id="redButton">Красный</button>		
+		<script>
+		let myParagraph = document.getElementById('myParagraph');
+		let strikeButton = document.getElementById('strikeButton');
+		let boldButton = document.getElementById('boldButton');
+		let redButton = document.getElementById('redButton');
+		strikeButton.addEventListener('click', function() {
+		myParagraph.style.textDecoration = 'line-through';
+		});
+		boldButton.addEventListener('click', function() {
+		myParagraph.style.fontWeight = 'bold';
+		});
+		redButton.addEventListener('click', function() {
+		myParagraph.style.color = 'red';
+		});
+		</script>
+	</body>
+</html

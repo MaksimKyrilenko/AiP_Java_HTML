@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<ul>
+			<li>Элемент 1 <a href="#" class="remove">Удалить</a></li>
+			<li>Элемент 2 <a href="#" class="remove">Удалить</a></li>
+			<li>Элемент 3 <a href="#" class="remove">Удалить</a></li>
+		  </ul>
+		  
+		  <script>
+			let items = document.querySelectorAll('li');
+			
+			for (let item of items) {
+			  let remove = document.createElement('a');
+			  remove.href = '#';
+			  remove.textContent = 'Удалить';
+			  
+			  item.appendChild(remove);
+			  
+			  remove.addEventListener('click', function(event) {
+				item.remove();
+				event.preventDefault();
+			  });
+			}
+		  </script>					
+	</body>
+</html

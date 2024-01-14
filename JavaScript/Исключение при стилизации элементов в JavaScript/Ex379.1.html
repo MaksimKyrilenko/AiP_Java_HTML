@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<ul id="myList">
+			<li>Первый элемент</li>
+			<li>Второй элемент</li>
+			<li>Третий элемент</li>
+		  </ul>
+		  <button id="myButton">Добавить стили</button>		  
+		<script>
+		let myList = document.getElementById('myList');
+		let myButton = document.getElementById('myButton');
+
+		myButton.addEventListener('click', function() {
+		let liElements = myList.getElementsByTagName('li');
+		for (let i = 0; i < liElements.length; i++) {
+			liElements[i].style.cssFloat = 'left';
+		}
+		});
+		</script>
+	</body>
+</html

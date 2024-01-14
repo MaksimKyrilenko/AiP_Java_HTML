@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input type="checkbox" id="myCheckbox">
+		<button id="helloButton">Привет</button>
+		<button id="byeButton">Пока</button>
+		<p id="result"></p>					  
+		  <script>
+		const checkbox = document.querySelector('#myCheckbox');
+		const helloButton = document.querySelector('#helloButton');
+		const byeButton = document.querySelector('#byeButton');
+		const result = document.querySelector('#result');
+
+		helloButton.addEventListener('click', function() {
+		if (checkbox.checked) {
+			result.textContent = 'привет';
+		}
+		});
+
+		byeButton.addEventListener('click', function() {
+		if (!checkbox.checked) {
+			result.textContent = 'пока';
+		}
+		});
+		  </script>		  
+	</body>
+</html

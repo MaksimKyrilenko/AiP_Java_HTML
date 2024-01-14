@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<ul id="elem">
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+		  </ul>
+		  <script>
+			let elem = document.getElementById('elem');
+
+			let newStartElement = document.createElement('li');
+			newStartElement.textContent = 'start';
+			elem.prepend(newStartElement);
+
+			let newFinishElement = document.createElement('li');
+			newFinishElement.textContent = 'finish';
+			elem.append(newFinishElement);
+		  </script>		  
+	</body>
+</html

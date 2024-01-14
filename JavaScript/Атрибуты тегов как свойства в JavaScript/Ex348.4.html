@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		
+		<a id="myLink" href="https://www.youtube.com">Ссылка</a>
+		<button id="myButton">Нажми меня</button>
+
+		
+		<script>
+
+		let link = document.getElementById("myLink");
+		let button = document.getElementById("myButton");
+
+		button.addEventListener("click", function() {
+			var href = link.getAttribute("href");
+			link.textContent += " (" + href + ")";
+		});
+		
+		</script>
+	</body>
+</html>

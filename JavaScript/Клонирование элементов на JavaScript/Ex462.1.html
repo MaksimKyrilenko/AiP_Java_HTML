@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input type="text" id="originalInput">
+		<button id="cloneButton">Клонировать</button>		
+		<script>
+		  let originalInput = document.getElementById('originalInput');
+		  let cloneButton = document.getElementById('cloneButton');	
+		  cloneButton.addEventListener('click', function() {
+			let clonedInput = originalInput.cloneNode(false);
+			originalInput.parentNode.insertBefore(clonedInput, originalInput.nextSibling);
+		  });
+		</script>			  
+	</body>
+</html

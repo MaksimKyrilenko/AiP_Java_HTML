@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<ul id="elem">
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+		  </ul>	  
+		  <script>
+			let listItems = document.querySelectorAll('#elem li');		  
+			listItems.forEach(function(item) {
+			  item.addEventListener('click', function(event) {
+				if (event.ctrlKey) {
+				  item.textContent += '1';
+				}
+				if (event.shiftKey) {
+				  item.textContent += '2';
+				}
+			  });
+			});
+		  </script>						  
+	</body>
+</html

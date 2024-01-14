@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<table>
+			<thead>
+			  <tr>
+				<th>Имя</th>
+				<th>Возраст</th>
+				<th>Действия</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>Иван</td>
+				<td>25</td>
+				<td><a href="#" class="remove">Удалить</a></td>
+			  </tr>
+			  <tr>
+				<td>Петр</td>
+				<td>30</td>
+				<td><a href="#" class="remove">Удалить</a></td>
+			  </tr>
+			  <tr>
+				<td>Мария</td>
+				<td>27</td>
+				<td><a href="#" class="remove">Удалить</a></td>
+			  </tr>
+			</tbody>
+		  </table>		  
+		  <script>
+			let rows = document.querySelectorAll('tbody tr');
+			
+			for (let row of rows) {
+			  let remove = document.createElement('a');
+			  remove.href = '#';
+			  remove.textContent = 'Удалить';
+			  
+			  let cell = document.createElement('td');
+			  cell.appendChild(remove);
+			  
+			  row.appendChild(cell);
+			  
+			  remove.addEventListener('click', function(event) {
+				row.remove();
+				event.preventDefault();
+			  });
+			}
+		  </script>					  
+	</body>
+</html

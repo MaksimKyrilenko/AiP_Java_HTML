@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<div id="elem1" style="background-color: green; padding: 20px;">
+			<div id="elem2" style="background-color: lightblue; padding: 20px;">
+			  <div id="elem3" style="background-color: red; padding: 20px;"></div>
+			</div>
+		  </div>
+		  <script>
+			let elem1 = document.querySelector('#elem1');
+			let elem2 = document.querySelector('#elem2');
+			let elem3 = document.querySelector('#elem3');
+		  
+			elem1.addEventListener('click', function() {
+			  alert('зеленый');
+			});
+			elem2.addEventListener('click', function() {
+			  alert('голубой');
+			});
+			elem3.addEventListener('click', function() {
+			  alert('красный');
+			});
+			let input = document.createElement('input');
+			input.type = 'text';
+			input.placeholder = 'Наведите и кликните';
+			document.body.appendChild(input);
+		  
+			input.addEventListener('focus', function() {
+			  alert('Фокус на поле ввода');
+			});
+		  </script>		  
+	</body>
+</html

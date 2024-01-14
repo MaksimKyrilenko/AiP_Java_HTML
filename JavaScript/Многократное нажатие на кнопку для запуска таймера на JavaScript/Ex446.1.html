@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<button id="start">start</button>
+		<script>
+			let start = document.querySelector('#start');
+			function startTimer() {
+			let i = 100;
+			
+			let timerId = setInterval(function() {
+				console.log(i);
+				if (i < 0) {
+				clearInterval(timerId);
+				start.addEventListener('click', startTimer); 
+				}
+			 1000});
+			}
+			start.removeEventListener('click', startTimer); 
+			start.addEventListener('click', startTimer);
+		</script>
+	</body>
+</html>

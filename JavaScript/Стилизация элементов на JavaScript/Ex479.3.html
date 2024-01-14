@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<table>
+			<thead>
+			  <tr>
+				<th>Header 1</th>
+				<th>Header 2</th>
+				<th>Header 3</th>
+				<th>Action</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>text1</td>
+				<td>text2</td>
+				<td>text3</td>
+				<td><a href="#" class="link">Highlight</a></td>
+			  </tr>
+			  <tr>
+				<td>text4</td>
+				<td>text5</td>
+				<td>text6</td>
+				<td><a href="#" class="link">Highlight</a></td>
+			  </tr>
+			</tbody>
+		  </table>
+		  
+		  <script>
+			let links = document.querySelectorAll('.link');
+		  
+			for (let link of links) {
+			  link.addEventListener('click', function(e) {
+				e.preventDefault();
+				this.parentNode.parentNode.style.backgroundColor = 'green';
+			  });
+			}
+		  </script>						
+	</body>
+</html

@@ -1,0 +1,20 @@
+Применение cтилизации в JavaScript
+Давайте сделаем кнопку, по нажатию на которую элемент будет то показываться, то скрываться. Пусть по умолчанию элемент скрыт (это реализуем с помощью display: none), а покажется он с помощью добавления класса active. Этот класс будем то добавлять, то убирать с помощью classList.toggle:
+
+<button id="button">click me</button>
+<div id="elem"></div>
+#elem {
+	display: none;
+	width: 200px;
+	height: 200px;
+	border: 1px solid green;
+}
+#elem.active {
+	display: block;
+}
+let button = document.querySelector('#button');
+let elem = document.querySelector('#elem');
+
+button.addEventListener('click', function() {
+	elem.classList.toggle('active');
+});

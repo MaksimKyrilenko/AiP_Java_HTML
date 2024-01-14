@@ -1,0 +1,129 @@
+№1
+
+let num = 100;
+let timerId;
+
+function startTimer() {
+  timerId = setInterval(function() {
+    console.log(num–);
+    if (num < 0) {
+      clearInterval(timerId);
+    }
+  , 1000);
+
+
+function stopTimer() {
+  clearInterval(timerId);
+
+
+let start = document.querySelector('#start');
+let stop = document.querySelector('#stop');
+
+start.addEventListener('click', startTimer);
+stop.addEventListener('click', stopTimer);
+
+№2
+
+let start = document.querySelector('#start');
+let stop  = document.querySelector('#stop');
+let timerId;
+
+start.addEventListener('click', function() {
+  timerId = setInterval(function() {
+    let date = new Date;
+    console.log(date.getMinutes() + ' ' + date.getSeconds());
+  , 1000);
+);
+
+stop.addEventListener('click', function() {
+  clearInterval(timerId);
+);
+
+№3
+
+let start = document.querySelector('#start');
+let stop  = document.querySelector('#stop');
+let timerId;
+
+start.addEventListener('click', function() {
+  timerId = setInterval(function() {
+    let date = new Date;
+    console.log(date.getMinutes() + ' ' + date.getSeconds());
+  , 1000);
+);
+
+stop.addEventListener('click', function() {
+  clearInterval(timerId);
+);
+
+Здесь ошибка заключается в том, что внутри функции запуска таймера создается новая локальная переменная timerId, которая не имеет отношения к глобальной переменной timerId. Из-за этого при попытке остановить таймер по нажатию на кнопку stop обращение к глобальной переменной timerId не работает.
+
+№4
+
+let start = document.querySelector('#start');
+let stop  = document.querySelector('#stop');
+let timerId;
+
+start.addEventListener('click', function() {
+  timerId = setInterval(function() {
+    let date = new Date;
+    console.log(date.getMinutes() + ' ' + date.getSeconds());
+  , 1000);
+);
+
+stop.addEventListener('click', function() {
+  clearInterval(timerId);
+);
+
+Здесь ошибка заключается в том, что при получении ссылок на кнопки не указан символ "#" перед их id. Из-за этого переменные start и stop остаются undefined, и добавление обработчиков событий на них не работает.
+№5
+
+Ошибки в коде:
+1. Не указан символ "#" перед id при получении ссылок на кнопки.
+2. Внутри функции остановки таймера не указан аргумент - ссылка на переменную, которую нужно остановить.
+
+Исправленный код:
+
+<input type="submit" id="start" value="start">
+<input type="submit" id="stop"  value="stop">
+
+let start = document.querySelector('#start');
+let stop  = document.querySelector('#stop');
+let timerId;
+
+start.addEventListener('click', function() {
+  timerId = setInterval(function() {
+    let date = new Date;
+    console.log(date.getMinutes() + ' ' + date.getSeconds());
+  , 1000);
+);
+
+stop.addEventListener('click', function() {
+  clearInterval(timerId);
+);
+
+№6
+
+Исправленный код:
+
+let start = document.querySelector('#start');
+let stop  = document.querySelector('#stop');
+let timerId;
+
+function startTimer() {
+  start.removeEventListener('click', startTimer);
+  timerId = setInterval(function() {
+    let date = new Date;
+    console.log(date.getMinutes() + ' ' + date.getSeconds());
+  , 1000);
+
+
+function stopTimer() {
+  clearInterval(timerId);
+  start.addEventListener('click', startTimer);
+
+
+start.addEventListener('click', startTimer);
+stop.addEventListener('click', stopTimer); 
+
+Здесь при нажатии на кнопку старт сначала отвязываем от нее функцию-обработчик, затем запускаем таймер. При нажатии на кнопку стоп сначала останавливаем таймер, затем привязываем обратно функцию-обработчик к кнопке старт. Таким образом, по нажатию на кнопку старт после запуска таймера больше не происходит ничего, пока не будет нажата кнопка стоп.

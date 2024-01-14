@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<p>text1 <a href="#" class="link">link</a></p>
+		<p>text2 <a href="#" class="link">link</a></p>
+		<p>text3 <a href="#" class="link">link</a></p>
+		
+		<script>
+		  let links = document.querySelectorAll('.link');
+		
+		  for (let link of links) {
+			link.addEventListener('click', function(e) {
+			  e.preventDefault();
+			  let span = document.createElement('span');
+			  span.textContent = this.parentNode.firstChild.textContent;
+			  this.parentNode.firstChild.replaceWith(span);
+			  span.style.textDecoration = 'line-through';
+			  this.parentNode.removeChild(this);
+			});
+		  }
+		</script>					  
+	</body>
+</html

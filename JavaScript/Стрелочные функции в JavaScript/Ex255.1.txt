@@ -1,0 +1,35 @@
+Стрелочные функции в JavaScript
+Давайте теперь рассмотрим стрелочные функции, упрощающие синтаксис функций.
+
+В следующем примере кода первой написана обычная функция, а второй - соответствующая ей стрелочная (обе функции делают одно и тоже):
+
+let func1 = function(num1, num2) {
+	let result = num1 * num2;
+	return result;
+}
+
+let func2 = (num1, num2) => {
+	let result = num1 * num2;
+	return result;
+}
+Если в функции одна строка кода, то в стрелочных функциях можно не писать return и фигурные скобки:
+
+let func1 = function(num1, num2) {
+	return num1 * num2
+}
+
+let func2 = (num1, num2) => num1 * num2;
+Если параметр стрелочной функции один - круглые скобки можно не писать:
+
+let func1 = function(num) {
+	return num * num;
+}
+
+let func2 = num => num * num
+Если в функции вообще нет параметров - нужно писать пустые круглые скобки:
+
+let func1 = function() {
+	console.log('!!!');
+}
+
+let func2 = () => console.log('!!!')

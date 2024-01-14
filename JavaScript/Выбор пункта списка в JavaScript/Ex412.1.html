@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<select id="mySelect">
+			<option value="1">Option 1</option>
+			<option value="2">Option 2</option>
+			<option value="3">Option 3</option>
+		  </select>
+		  
+		  <script>
+			let select = document.querySelector('#select');
+			let options = select.options;
+			let lastOption = options[options.length - 1];
+			lastOption.selected = true;
+			let button = document.querySelector('#button');
+			button.addEventListener('click', function() {
+			lastOption.selected = true;
+			});
+		  </script>				
+	</body>
+</html

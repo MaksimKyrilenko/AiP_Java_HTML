@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input type="checkbox" id="myCheckbox">
+		<button id="checkButton">Отметить</button>
+		<button id="uncheckButton">Снять отметку</button>			  
+		  <script>
+		const checkbox = document.querySelector('#myCheckbox');
+		const checkButton = document.querySelector('#checkButton');
+		const uncheckButton = document.querySelector('#uncheckButton');
+
+		checkButton.addEventListener('click', function() {
+		checkbox.checked = true;
+		});
+
+		uncheckButton.addEventListener('click', function() {
+		checkbox.checked = false;
+		});
+
+		  </script>		  
+	</body>
+</html

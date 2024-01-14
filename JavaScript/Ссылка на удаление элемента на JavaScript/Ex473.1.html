@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<div id="parent">
+			<p id="elem">Текст абзаца</p>
+			<a href="#" id="remove">Удалить</a>
+		  </div>
+		  
+		  <script>
+			let elem = document.querySelector('#elem');
+			let remove = document.querySelector('#remove');
+		  
+			remove.addEventListener('click', function(event) {
+			  elem.remove();
+			  event.preventDefault(); 
+			});
+		  </script>
+				
+	</body>
+</html

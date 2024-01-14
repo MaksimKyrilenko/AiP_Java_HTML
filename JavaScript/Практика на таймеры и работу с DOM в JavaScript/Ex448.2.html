@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="elem" value="1">
+		  <script>
+			let elem = document.querySelector('#elem');
+			elem.value = 10;
+
+			let timer = setInterval(function() {
+			elem.value = elem.value - 1;
+			if (elem.value == 0) {
+				clearInterval(timer);
+			}
+			}, 1000);
+		  </script>		  
+	</body>
+</html

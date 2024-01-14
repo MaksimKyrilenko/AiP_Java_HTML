@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>		
+		<p id="elem"><b>Yasuo</b></p>
+		<input id="button" type="submit">		
+		<script>
+		let elem = document.querySelector('#elem');
+		let button = document.querySelector('#button');		
+		button.addEventListener('click', function() {
+			console.log(elem.innerHTML);
+		});		
+		</script>
+	</body>
+</html>

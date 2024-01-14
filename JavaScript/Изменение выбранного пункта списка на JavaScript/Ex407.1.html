@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<select id="months">
+			<option value="1">Январь</option>
+			<option value="2">Февраль</option>
+			<option value="3">Март</option>
+			<option value="4">Апрель</option>
+			<option value="5">Май</option>
+			<option value="6">Июнь</option>
+			<option value="7">Июль</option>
+			<option value="8">Август</option>
+			<option value="9">Сентябрь</option>
+			<option value="10">Октябрь</option>
+			<option value="11">Ноябрь</option>
+			<option value="12">Декабрь</option>
+		  </select>
+		  <p></p>
+		  
+		  <script>
+			let months = document.querySelector('#months');
+			let p = document.querySelector('p');
+
+			let currentMonth = new Date().getMonth() + 1;
+
+			months.value = currentMonth;
+
+			p.textContent = `Выбран месяц ${months.options[months.selectedIndex].text}`;
+		  </script>		  
+	</body>
+</html

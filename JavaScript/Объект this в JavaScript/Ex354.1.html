@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>
+		<input id="elem" value="text"> 	
+		<script>
+		let elem = document.querySelector('#elem');			
+		function func() {
+		console.log(this.value);
+		}
+		elem.addEventListener('blur', function() {
+		this.value = '2';
+		});		
+		elem.addEventListener('focus', function() {
+		this.value = '1';
+		});		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<p id="elem">text</p>
+		<input type="submit" id="show" value="show">
+		<input type="submit" id="hide" value="hide">
+		  <script>
+			let elem = document.querySelector('#elem');
+			let button = document.querySelector('#toggle');
+
+			button.addEventListener('click', function() {
+			if (elem.classList.contains('hidden')) {
+				elem.classList.remove('hidden');
+			} else {
+				elem.classList.add('hidden');
+			}
+			});
+		  </script>		  
+	</body>
+</html

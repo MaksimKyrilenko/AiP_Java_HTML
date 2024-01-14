@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="numberInput" type="number">
+		<select id="daySelect">
+		  <option value="Monday">Понедельник</option>
+		  <option value="Tuesday">Вторник</option>
+		  <option value="Wednesday">Среда</option>
+		  <option value="Thursday">Четверг</option>
+		  <option value="Friday">Пятница</option>
+		  <option value="Saturday">Суббота</option>
+		  <option value="Sunday">Воскресенье</option>
+		</select>
+		<script>
+		  let numberInput = document.querySelector('#numberInput');
+		  let daySelect = document.querySelector('#daySelect');
+		  
+		  numberInput.addEventListener('blur', function() {
+			daySelect.selectedIndex = parseInt(numberInput.value) - 1;
+		  });
+		</script>
+			  
+	</body>
+</html

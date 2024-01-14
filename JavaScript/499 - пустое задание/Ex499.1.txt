@@ -1,0 +1,40 @@
+Передача настроек модуля через замыкания в JavaScript
+Пусть у нас есть следующий модуль:
+
+;(function(root, type, amount) {
+	let parent = document.querySelector(root);
+	
+	for (let i = 1; i <= amount; i++) {
+		let elem = document.createElement(type);
+		parent.append(elem);
+	}
+})('#parent', 'p', 5);
+Как вы видите, в этот модуль передаются три настройки: селектор родительского элемента, тип элемента для создания и количество элементов.
+
+Как правило такие настройки делают в виде объекта:
+
+let config = {
+	root:  '#parent',
+	type:  'p',
+	amount: 5
+}
+Давайте передадим параметром модуля наш объект:
+
+;(function(config) {
+	let parent = document.querySelector(config.root);
+	
+	for (let i = 1; i <= config.amount; i++) {
+		let elem = document.createElement(config.type);
+		parent.append(elem);
+	}
+})(config);
+Более принято выполнять деструктуризацию объекта с настройками:
+
+;(function({root, type, amount}) {
+	let parent = document.querySelector(root);
+	
+	for (let i = 1; i <= amount; i++) {
+		let elem = document.createElement(type);
+		parent.append(elem);
+	}
+})(config);

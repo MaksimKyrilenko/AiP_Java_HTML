@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<div id="elem">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+		  
+		  <script>
+		const elem = document.querySelector('#elem');
+		for (let node of elem.childNodes) {
+		if (node.nodeType === Node.ELEMENT_NODE) {
+			console.log('Элемент:', node);
+		} else if (node.nodeType === Node.TEXT_NODE) {
+			console.log('Текст:', node.textContent);
+		}
+		}
+		  </script>		  
+	</body>
+</html

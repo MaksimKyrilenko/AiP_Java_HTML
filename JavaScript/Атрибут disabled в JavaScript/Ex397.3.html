@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<input id="myInput" type="text">
+		<button id="checkButton">Проверить</button>			  
+		  <script>
+		const input = document.querySelector('#myInput');
+		const checkButton = document.querySelector('#checkButton');
+
+		checkButton.addEventListener('click', function() {
+		if (input.disabled) {
+			alert('Инпут заблокирован');
+		} else {
+			alert('Инпут не заблокирован');
+		}
+		});
+		  </script>		  
+	</body>
+</html

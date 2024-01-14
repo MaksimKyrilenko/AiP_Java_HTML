@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+	</head>
+	<body>	
+		<div>
+			<ul>
+			  <li>1</li>
+			  <li>2</li>
+			  <li>3</li>
+			</ul>
+		  </div>
+		  
+		  <script>
+			let div = document.querySelector('div');
+		  
+			div.addEventListener('click', function(event) {
+			  if (event.target.tagName === 'DIV') {
+				console.log('Клик по div');
+			  }
+			  if (event.target.tagName === 'UL') {
+				console.log('Клик по ul');
+			  }
+			  if (event.target.tagName === 'LI') {
+				event.target.textContent += '!';
+			  }
+			});
+		  </script>					  
+	</body>
+</html
